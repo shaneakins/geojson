@@ -2,13 +2,18 @@ import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet'
 
 import { MapTypes } from '../../types/'
 
+const mapStyle: React.CSSProperties = {
+  width: '500px',
+  height: '500px',
+}
+
 const Map = ({ data, position }: MapTypes) => {
   return (
     <MapContainer
       center={position}
       zoom={5}
       scrollWheelZoom={false}
-      style={{ height: '500px' }}
+      style={mapStyle}
       key={Math.random()}
     >
       <GeoJSON data={data} />
