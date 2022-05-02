@@ -1,6 +1,11 @@
 import Head from 'next/head'
-
+import dynamic from 'next/dynamic'
 import styles from '@/pages/index.module.css'
+
+const Geo = dynamic<{}>(
+  () => import('../components/Geo').then((mod) => mod.Geo),
+  { ssr: false }
+)
 
 export default function Home() {
   return (
