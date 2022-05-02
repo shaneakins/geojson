@@ -1,4 +1,4 @@
-import { FieldTypes } from '../../types/'
+import { FieldTypes } from 'types/'
 
 const Field = ({ label, name, register, required, validate }: FieldTypes) => (
   <label>

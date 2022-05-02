@@ -2,10 +2,10 @@ import { useState } from 'react'
 import osmtogeojson from 'osmtogeojson'
 import { GeoJsonObject } from 'geojson'
 import { LatLngTuple } from 'leaflet'
-import Form from '../Form'
-import Map from '../Map'
+import Form from '@/components/Form'
+import Map from '@/components/Map'
 
-import { UserSubmitFormShort } from '../../types/'
+import { UserSubmitFormShort } from 'types/'
 
 export const Geo = () => {
   const [position, setPosition] = useState<LatLngTuple>([0, 0])
@@ -19,7 +19,8 @@ export const Geo = () => {
     const minLng = lng - MIN_MAX_RANGE
     const maxLat = lat + MIN_MAX_RANGE
     const maxLng = lng + MIN_MAX_RANGE
-    const bbox = `${minLat},${minLng},${maxLat},${maxLng}`
+    // const bbox = `${minLat},${minLng},${maxLat},${maxLng}`
+    const bbox = `${minLng},${minLat},${maxLng},${maxLat}`
 
     setPosition([lat, lng])
     fetchData(bbox)

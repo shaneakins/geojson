@@ -1,18 +1,12 @@
-import { CSSProperties } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import FieldErrorMessage from './FieldErrorMessage'
 import Field from './Field'
-import { isLatValid, isLongValid } from '../../utils'
-
-import { UserSubmitFormShort } from '../../types/'
+import { isLatValid, isLongValid } from 'utils/utils'
+import { VALID_RANGE } from 'utils/constants'
+import { UserSubmitFormShort } from 'types/'
 
 type Props = {
   submitData: SubmitHandler<UserSubmitFormShort>
-}
-
-const style: CSSProperties = {
-  color: 'red',
-  fontSize: '10pt',
 }
 
 const Form = ({ submitData }: Props) => {
@@ -34,7 +28,7 @@ const Form = ({ submitData }: Props) => {
         />
         {errors.lat && errors.lat.type === 'validate' && (
           <FieldErrorMessage>
-            Latitude must be between -90 and 90
+            {`Latitude must be between ${VALID_RANGE.MIN_LAT} and ${VALID_RANGE.MAX_LAT}`}
           </FieldErrorMessage>
         )}
         {errors.lat && errors.lat.message && (
@@ -51,7 +45,7 @@ const Form = ({ submitData }: Props) => {
         />
         {errors.lng && errors.lng.type === 'validate' && (
           <FieldErrorMessage>
-            Longitude must be between -180 and 180
+            {`Longitute must be between ${VALID_RANGE.MIN_LNG} and ${VALID_RANGE.MAX_LNG}`}
           </FieldErrorMessage>
         )}
         {errors.lng && errors.lng.message && (
