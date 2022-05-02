@@ -4,7 +4,7 @@ import FieldErrorMessage from './FieldErrorMessage'
 import Field from './Field'
 import { isLatValid, isLongValid } from '../../utils'
 
-import { UserSubmitFormShort } from '../../types'
+import { UserSubmitFormShort } from '../../types/'
 
 type Props = {
   submitData: SubmitHandler<UserSubmitFormShort>
