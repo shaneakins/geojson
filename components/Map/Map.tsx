@@ -1,6 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet'
 
-import { GeoJsonObject } from 'geojson'
 import { MapTypes } from '../../types/'
 
 const Map = ({ data, position }: MapTypes) => {
