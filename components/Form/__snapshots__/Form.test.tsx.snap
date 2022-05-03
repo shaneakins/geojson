@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeForm should render the basic fields 1`] = `
+<div>
+  <form>
+    <div>
+      <label>
+        <input
+          name="lat"
+          placeholder="Latitude"
+          type="text"
+        />
+      </label>
+    </div>
+    <div>
+      <label>
+        <input
+          name="lng"
+          placeholder="Longitude"
+          type="text"
+        />
+      </label>
+    </div>
+    <input
+      type="submit"
+      value="Plot"
+    />
+  </form>
+</div>
+`;
