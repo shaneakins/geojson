@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet'
-import { randomId } from 'utils'
-import { MapTypes } from '../../types/'
+import { randomId } from 'utils/utils'
+import { MapTypes } from 'types/'
 
 const mapStyle: React.CSSProperties = {
   width: '500px',
