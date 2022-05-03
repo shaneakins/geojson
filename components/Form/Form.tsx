@@ -1,8 +1,8 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
 import FieldErrorMessage from './FieldErrorMessage'
 import Field from './Field'
-import { isLatValid, isLongValid } from 'utils/utils'
-import { VALID_RANGE } from 'utils/constants'
+import { isLatValid, isLongValid } from '../../utils/utils'
+import { VALID_RANGE } from '../../utils/constants'
 import { UserSubmitFormShort } from 'types/'
 
 type Props = {
@@ -37,7 +37,7 @@ const Form = ({ submitData }: Props) => {
       </div>
       <div>
         <Field
-          label='Longitiude'
+          label='Longitude'
           name='lng'
           register={register}
           required
@@ -45,7 +45,7 @@ const Form = ({ submitData }: Props) => {
         />
         {errors.lng && errors.lng.type === 'validate' && (
           <FieldErrorMessage>
-            {`Longitute must be between ${VALID_RANGE.MIN_LNG} and ${VALID_RANGE.MAX_LNG}`}
+            {`Longitude must be between ${VALID_RANGE.MIN_LNG} and ${VALID_RANGE.MAX_LNG}`}
           </FieldErrorMessage>
         )}
         {errors.lng && errors.lng.message && (
