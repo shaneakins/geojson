@@ -16,7 +16,7 @@ const Map = ({ data, position }: MapTypes) => {
       style={mapStyle}
       key={randomId}
     >
-      <GeoJSON data={data} />
+      {data && <GeoJSON data={data} />}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
