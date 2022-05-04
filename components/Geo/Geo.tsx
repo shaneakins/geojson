@@ -45,3 +45,4 @@ export const Geo = () => {
     </>
   )
 }
+// export default Geo
