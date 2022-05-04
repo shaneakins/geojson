@@ -39,9 +39,9 @@ export const Geo = () => {
   return (
     <>
       <Form submitData={submitData} />
-      {error && <p>There was an error loading the data</p>}
+      {error && !loading && <p>There was an error loading the data</p>}
       {loading && <p>Loading</p>}
-      {geoData && <Map data={geoData} position={position} />}
+      {geoData && !loading && <Map data={geoData} position={position} />}
     </>
   )
 }
