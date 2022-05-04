@@ -1,0 +1,19 @@
+import React from 'react'
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import { Geo } from './Geo'
+
+const setup = () => {
+  const utils = render(<Geo />)
+
+  return {
+    ...utils,
+  }
+}
+
+describe('Form', () => {
+  it('should render ', () => {
+    const { container } = setup()
+    expect(container).toMatchSnapshot()
+  })
+})

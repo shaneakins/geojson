@@ -1,0 +1,20 @@
+import React from 'react'
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Map from './Map'
+import mockData from '../../mocks/mockData.json'
+
+const setup = () => {
+  const utils = render(<Map position={[0, 0]} data={mockData} />)
+
+  return {
+    ...utils,
+  }
+}
+
+describe('Form', () => {
+  it('should render ', () => {
+    const { container } = setup()
+    expect(container).toMatchSnapshot()
+  })
+})
